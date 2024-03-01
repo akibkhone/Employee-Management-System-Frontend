@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const EMPLOYEE_API_BASE_URL = "http://localhost:8080/api/v1";
+const EMPLOYEE_API_BASE_URL = "https://employee-management-system-backend-hfxp.onrender.com/api/v1";
 
 class EmployeeService {
   saveEmployee(employee) {
@@ -10,7 +10,7 @@ class EmployeeService {
   fetchEmployees() {
     return axios.get(`${EMPLOYEE_API_BASE_URL}/getAllEmployees`);
   }
-
+npm 
   deleteEmployee(id) {
     return axios.delete(`${EMPLOYEE_API_BASE_URL}/deleteEmployee/${id}`);
   }
