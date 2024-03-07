@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const EMPLOYEE_API_BASE_URL = "https://employeemanagementsystem-latest.onrender.com/api/v1";
+const EMPLOYEE_API_BASE_URL = "https://employee-management-system-backend-latest.onrender.com/api/v1";
+
 
 class EmployeeService {
   saveEmployee(employee) {
