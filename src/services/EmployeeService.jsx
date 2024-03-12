@@ -1,26 +1,28 @@
-import axios from "axios";
+import axios from 'axios';
 
-const EMPLOYEE_API_BASE_URL = "https://employeemanagementsystem-latest.onrender.com/api/v1";
+// const EMPLOYEE_API_BASE_URL = 'http://localhost:8080/api/v1';
+
+const EMPLOYEE_API_BASE_URL = 'https://employeemanagementsystem-latest.onrender.com/api/v1';
 
 class EmployeeService {
-  saveEmployee(employee) {
-    return axios.post(`${EMPLOYEE_API_BASE_URL}/addEmployee`, employee);
-  }
+	saveEmployee(employee) {
+		return axios.post(`${EMPLOYEE_API_BASE_URL}/addEmployee`, employee);
+	}
 
-  fetchEmployees() {
-    return axios.get(`${EMPLOYEE_API_BASE_URL}/getAllEmployees`);
-  }
-npm 
-  deleteEmployee(id) {
-    return axios.delete(`${EMPLOYEE_API_BASE_URL}/deleteEmployee/${id}`);
-  }
+	fetchEmployees() {
+		return axios.get(`${EMPLOYEE_API_BASE_URL}/getAllEmployees`);
+	}
+	npm;
+	deleteEmployee(id) {
+		return axios.delete(`${EMPLOYEE_API_BASE_URL}/deleteEmployee/${id}`);
+	}
 
-  fetchEmployeeById(id) {
-    return axios.get(`${EMPLOYEE_API_BASE_URL}/getEmployee/${id}`);
-  }
+	fetchEmployeeById(id) {
+		return axios.get(`${EMPLOYEE_API_BASE_URL}/getEmployee/${id}`);
+	}
 
-  updateEmployeeById(id, employee) {
-    return axios.put(`${EMPLOYEE_API_BASE_URL}/updateEmployee/${id}`, employee);
-  }
+	updateEmployeeById(id, employee) {
+		return axios.put(`${EMPLOYEE_API_BASE_URL}/updateEmployee/${id}`, employee);
+	}
 }
 export default new EmployeeService();
